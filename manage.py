@@ -3,7 +3,7 @@
 
 import unittest
 
-#import coverage
+import coverage
 
 from flask.cli import FlaskGroup
 
@@ -16,7 +16,7 @@ app = create_app()
 cli = FlaskGroup(create_app=create_app)
 
 # code coverage
-"""
+
 COV = coverage.coverage(
     branch=True,
     include='project/*',
@@ -27,7 +27,7 @@ COV = coverage.coverage(
     ]
 )
 COV.start()
-"""
+
 
 @cli.command()
 def create_db():
